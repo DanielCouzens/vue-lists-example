@@ -14,7 +14,7 @@
         </button>
       </li>
     </ol>
-    <p v-else>You do not have any items</p>
+    <p v-else>Please add items</p>
   </div>
 </template>
 
@@ -34,7 +34,11 @@ export default {
   },
   methods: {
     addTodo() {
-      if (this.item.length === 0) return;
+      console.log("alert");
+      if (this.item.length === 0) {
+        alert("please add text");
+        return;
+      }
       this.items.push({ name: this.item });
     },
     removeItem(index) {
