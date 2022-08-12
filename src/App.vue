@@ -34,7 +34,6 @@ export default {
   },
   methods: {
     addTodo() {
-      console.log("alert");
       if (this.item.length === 0) {
         alert("please add text");
         return;
